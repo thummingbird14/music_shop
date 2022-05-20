@@ -1,4 +1,3 @@
-import musicshop.instruments.Piano;
 import musicshop.instruments.Trumpet;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,25 +7,41 @@ import static org.junit.Assert.assertEquals;
 public class TrumpetTest {
 
     private Trumpet trumpet;
-    private Trumpet trumpet2;
 
     @Before
     public void before(){
-        Trumpet  trumpet = new Trumpet("brass", "gold", "Brass", 450.00, 700.00, 3);
+        trumpet = new Trumpet("brass", "gold", "Brass", 450.00, 700.00, 3);
+    }
+    @Test
+    public void hasMaterial(){
+        assertEquals("brass", trumpet.getMaterial());
+    }
+    @Test
+    public void hasColour(){
+        assertEquals("gold", trumpet.getColour());
+    }
+    @Test
+    public void hasType(){
+        assertEquals("Brass", trumpet.getType());
+    }
+    @Test
+    public void hasPriceBought(){
+        assertEquals(450.00, trumpet.getPriceBought(), 0.0);
+    }
+    @Test
+    public void hasPriceToSell(){
+        assertEquals(700.00, trumpet.getPriceToSell(), 0.0);
     }
     @Test
     public void hasNumberOfValves(){
-        Trumpet trumpet2 = new Trumpet("brass", "gold", "Brass", 800.00, 1200.00, 4);
-        assertEquals(4, trumpet2.getNumberOfValves());
+        assertEquals(3, trumpet.getNumberOfValves());
     }
     @Test
     public void canPlay(){
-        Trumpet trumpet2 = new Trumpet("brass", "gold", "Brass", 800.00, 1200.00, 4);
-        assertEquals("Buuup", trumpet2.play());
+        assertEquals("Buuup", trumpet.play());
     }
     @Test
     public void canCalculateMarkup(){
-        Trumpet trumpet2 = new Trumpet("brass", "gold", "Brass", 800.00, 1200.00, 4);
-        assertEquals(400.00, trumpet2.calculateMarkup(), 0.0);
+        assertEquals(250.00, trumpet.calculateMarkup(), 0.0);
     }
 }

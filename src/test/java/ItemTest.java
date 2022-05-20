@@ -28,6 +28,7 @@ public class ItemTest {
     public void hasPriceToSell() {
         assertEquals(20.00, drumsticks.getPriceToSell(), 0.0);
     }
+
     @Test
     public void canCalculateMarkup() {
         assertEquals(5.00, drumsticks.calculateMarkup(), 0.0);

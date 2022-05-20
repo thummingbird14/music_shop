@@ -8,25 +8,40 @@ import static org.junit.Assert.assertEquals;
 public class PianoTest {
 
     private Piano piano;
-    private Piano piano2;
 
     @Before
-    public void before(){
-        Piano piano = new Piano("ivory", "white", "Keyboard", 800.00, 1200.00, 88);
+    public void before(){ piano = new Piano("ivory", "white", "Keyboard", 800.00, 1200.00, 88);
+    }
+    @Test
+    public void hasMaterial(){
+        assertEquals("ivory", piano.getMaterial());
+    }
+    @Test
+    public void hasColour(){
+        assertEquals("white", piano.getColour());
+    }
+    @Test
+    public void hasType(){
+        assertEquals("Keyboard", piano.getType());
+    }
+    @Test
+    public void hasPriceBought(){
+        assertEquals(800.00, piano.getPriceBought(), 0.0);
+    }
+    @Test
+    public void hasPriceToSell(){
+        assertEquals(1200.00, piano.getPriceToSell(), 0.0);
     }
     @Test
     public void hasNumberOfKeys(){
-        Piano piano2 = new Piano("ebony", "black", "Keyboard", 800.00, 1200.00, 88);
-        assertEquals(88, piano2.getNumberOfKeys());
+        assertEquals(88, piano.getNumberOfKeys());
     }
     @Test
     public void canPlay(){
-        Piano piano2 = new Piano("ebony", "black", "Keyboard", 800.00, 1200.00, 88);
-        assertEquals("Plink Plonk", piano2.play());
+        assertEquals("Plink Plonk", piano.play());
     }
     @Test
     public void canCalculateMarkup(){
-        Piano piano2 = new Piano("ebony", "black", "Keyboard", 800.00, 1200.00, 88);
-        assertEquals(400.00, piano2.calculateMarkup(), 0.0);
+        assertEquals(400.00, piano.calculateMarkup(), 0.0);
     }
 }

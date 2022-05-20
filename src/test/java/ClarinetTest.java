@@ -1,5 +1,4 @@
 import musicshop.instruments.Clarinet;
-import musicshop.instruments.Trumpet;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,25 +7,44 @@ import static org.junit.Assert.assertEquals;
 public class ClarinetTest {
 
     private Clarinet clarinet;
-    private Clarinet clarinet2;
 
     @Before
     public void before(){
-        Clarinet clarinet = new Clarinet("walnut", "brown", "Woodwind", 500.00, 750.00, 1);
+        clarinet = new Clarinet("walnut", "brown", "Woodwind", 500.00, 750.00, 1);
+    }
+
+    @Test
+    public void hasMaterial(){
+        assertEquals("walnut", clarinet.getMaterial());
+    }
+
+    @Test
+    public void hasColour(){
+        assertEquals("brown", clarinet.getColour());
     }
     @Test
+    public void hasType(){
+        assertEquals("Woodwind", clarinet.getType());
+    }
+    @Test
+    public void hasPriceBought(){
+        assertEquals(500.00, clarinet.getPriceBought(), 0.0);
+    }
+    @Test
+    public void hasPriceToSell(){
+        assertEquals(750.00, clarinet.getPriceToSell(), 0.0);
+    }
+
+    @Test
     public void hasNumberOfReeds(){
-        Clarinet clarinet2 = new Clarinet("ebony", "black", "Woodwind", 500.00, 750.00, 1);
-        assertEquals(1, clarinet2.getNumberOfReeds());
+        assertEquals(1, clarinet.getNumberOfReeds());
     }
     @Test
     public void canPlay(){
-        Clarinet clarinet2 = new Clarinet("ebony", "black", "Woodwind", 500.00, 750.00, 1);
-        assertEquals("Huduhuhu", clarinet2.play());
+        assertEquals("Huduhuhu", clarinet.play());
     }
     @Test
     public void canCalculateMarkup(){
-        Clarinet clarinet2 = new Clarinet("ebony", "black", "Woodwind", 500.00, 750.00, 1);
-        assertEquals(250.00, clarinet2.calculateMarkup(), 0.0);
+        assertEquals(250.00, clarinet.calculateMarkup(), 0.0);
     }
 }
