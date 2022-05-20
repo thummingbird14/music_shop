@@ -2,7 +2,7 @@ package musicshop.instruments;
 
 import musicshop.ISell;
 
-public class Guitar extends Instrument implements IPlay {
+public class Guitar extends Instrument implements IPlay, ISell {
 
     private int numberOfStrings;
 
@@ -18,6 +18,10 @@ public class Guitar extends Instrument implements IPlay {
     public String play(){
         return "Strum Strum";
         }
+
+    public double calculateMarkup(){
+        return this.getPriceToSell() - this.getPriceBought();
+    }
 
 
 }

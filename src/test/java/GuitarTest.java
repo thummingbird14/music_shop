@@ -49,4 +49,9 @@ public class GuitarTest {
         Guitar guitar2 = new Guitar("plastic", "blue", "String", 100.00, 150.95, 6);
         assertEquals("Strum Strum", guitar2.play());
     }
+    @Test
+    public void canCalculateMarkup(){
+        Guitar guitar2 = new Guitar("plastic", "blue", "String", 100.00, 150.95, 6);
+        assertEquals(50.95, guitar2.calculateMarkup(), 0.05 );
+    }
 }

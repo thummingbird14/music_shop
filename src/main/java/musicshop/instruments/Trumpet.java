@@ -1,6 +1,8 @@
 package musicshop.instruments;
 
-public class Trumpet extends Instrument implements IPlay{
+import musicshop.ISell;
+
+public class Trumpet extends Instrument implements IPlay, ISell {
 
     private int numberOfValves;
 
@@ -15,5 +17,10 @@ public class Trumpet extends Instrument implements IPlay{
 
     public String play(){
         return "Buuup";
+    }
+
+    @Override
+    public double calculateMarkup() {
+        return this.getPriceToSell() - this.getPriceBought();
     }
 }

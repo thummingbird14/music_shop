@@ -24,4 +24,9 @@ public class TrumpetTest {
         Trumpet trumpet2 = new Trumpet("brass", "gold", "Brass", 800.00, 1200.00, 4);
         assertEquals("Buuup", trumpet2.play());
     }
+    @Test
+    public void canCalculateMarkup(){
+        Trumpet trumpet2 = new Trumpet("brass", "gold", "Brass", 800.00, 1200.00, 4);
+        assertEquals(400.00, trumpet2.calculateMarkup(), 0.0);
+    }
 }

@@ -1,6 +1,8 @@
 package musicshop.instruments;
 
-public class Piano extends Instrument implements IPlay{
+import musicshop.ISell;
+
+public class Piano extends Instrument implements IPlay, ISell {
 
     private int numberOfKeys;
 
@@ -15,5 +17,9 @@ public class Piano extends Instrument implements IPlay{
 
     public String play(){
         return "Plink Plonk";
+    }
+
+    public double calculateMarkup(){
+        return this.getPriceToSell() - this.getPriceBought();
     }
 }

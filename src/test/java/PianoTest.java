@@ -24,4 +24,9 @@ public class PianoTest {
         Piano piano2 = new Piano("ebony", "black", "Keyboard", 800.00, 1200.00, 88);
         assertEquals("Plink Plonk", piano2.play());
     }
+    @Test
+    public void canCalculateMarkup(){
+        Piano piano2 = new Piano("ebony", "black", "Keyboard", 800.00, 1200.00, 88);
+        assertEquals(400.00, piano2.calculateMarkup(), 0.0);
+    }
 }

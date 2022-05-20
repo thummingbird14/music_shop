@@ -24,4 +24,9 @@ public class ClarinetTest {
         Clarinet clarinet2 = new Clarinet("ebony", "black", "Woodwind", 500.00, 750.00, 1);
         assertEquals("Huduhuhu", clarinet2.play());
     }
+    @Test
+    public void canCalculateMarkup(){
+        Clarinet clarinet2 = new Clarinet("ebony", "black", "Woodwind", 500.00, 750.00, 1);
+        assertEquals(250.00, clarinet2.calculateMarkup(), 0.0);
+    }
 }

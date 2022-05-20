@@ -1,5 +1,7 @@
 package musicshop.instruments;
 
+import musicshop.ISell;
+
 public abstract class Instrument {
 
     private String material;
