@@ -10,14 +10,13 @@ public class GuitarTest {
     private Guitar guitar2;
 
     @Before
-    public void before(){
-        Guitar guitar = new Guitar("plastic", "red", "String", 100.00, 150.95, 6);
+    public void before(){guitar = new Guitar("plastic", "red", "String", 100.00, 150.95, 6);
     }
 
     @Test
     public void hasMaterial(){
-        Guitar guitar2 = new Guitar("plastic", "blue", "String", 100.00, 150.95, 6);
-        assertEquals("plastic", guitar2.getMaterial());
+//        Guitar guitar2 = new Guitar("plastic", "blue", "String", 100.00, 150.95, 6);
+        assertEquals("plastic", guitar.getMaterial());
     }
     @Test
     public void hasColour(){
