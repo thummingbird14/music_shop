@@ -1,3 +1,4 @@
+import musicshop.instruments.InstrumentType;
 import musicshop.instruments.Trumpet;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +11,7 @@ public class TrumpetTest {
 
     @Before
     public void before(){
-        trumpet = new Trumpet("brass", "gold", "Brass", 450.00, 700.00, 3);
+        trumpet = new Trumpet("brass", "gold", InstrumentType.BRASS, 450.00, 700.00, 3);
     }
     @Test
     public void hasMaterial(){
@@ -22,7 +23,7 @@ public class TrumpetTest {
     }
     @Test
     public void hasType(){
-        assertEquals("Brass", trumpet.getType());
+        assertEquals(InstrumentType.BRASS, trumpet.getType());
     }
     @Test
     public void hasPriceBought(){

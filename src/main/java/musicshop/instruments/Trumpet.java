@@ -6,7 +6,7 @@ public class Trumpet extends Instrument implements IPlay, ISell {
 
     private int numberOfValves;
 
-    public Trumpet(String material, String colour, String type, double priceBought, double priceToSell, int numberOfValves) {
+    public Trumpet(String material, String colour, InstrumentType type, double priceBought, double priceToSell, int numberOfValves) {
         super(material, colour, type, priceBought, priceToSell);
         this.numberOfValves = numberOfValves;
     }

@@ -1,6 +1,7 @@
 import musicshop.Item;
 import musicshop.Shop;
 import musicshop.instruments.Guitar;
+import musicshop.instruments.InstrumentType;
 import musicshop.instruments.Piano;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,8 +20,8 @@ public class ShopTest {
     public void before() {
         shop = new Shop("Ray's Music Exchange");
         drumsticks = new Item("drumsticks", 15.00, 20.00);
-        piano = new Piano("ebony", "black", "Keyboard", 1000.00, 1500.00, 88);
-        guitar = new Guitar("plastic", "silver", "String", 200.00, 250.00, 4);
+        piano = new Piano("ebony", "black", InstrumentType.KEYBOARD, 1000.00, 1500.00, 88);
+        guitar = new Guitar("plastic", "silver", InstrumentType.STRING, 200.00, 250.00, 4);
         sheetmusic = new Item("sheetmusic", 5.00, 10.00);
     }
 

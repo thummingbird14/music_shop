@@ -1,4 +1,5 @@
 import musicshop.instruments.Guitar;
+import musicshop.instruments.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,7 +10,7 @@ public class GuitarTest {
     private Guitar guitar;
 
     @Before
-    public void before(){guitar = new Guitar("plastic", "red", "String", 100.00, 150.95, 6);
+    public void before(){guitar = new Guitar("plastic", "red", InstrumentType.STRING, 100.00, 150.95, 6);
     }
 
     @Test
@@ -22,7 +23,7 @@ public class GuitarTest {
     }
     @Test
     public void hasType(){
-        assertEquals("String", guitar.getType());
+        assertEquals(InstrumentType.STRING, guitar.getType());
     }
     @Test
     public void hasPriceBought(){

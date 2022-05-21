@@ -1,5 +1,4 @@
 import musicshop.Item;
-import musicshop.instruments.Guitar;
 import org.junit.Before;
 import org.junit.Test;
 

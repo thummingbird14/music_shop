@@ -1,4 +1,5 @@
 import musicshop.instruments.Guitar;
+import musicshop.instruments.InstrumentType;
 import musicshop.instruments.Piano;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +11,7 @@ public class PianoTest {
     private Piano piano;
 
     @Before
-    public void before(){ piano = new Piano("ivory", "white", "Keyboard", 800.00, 1200.00, 88);
+    public void before(){ piano = new Piano("ivory", "white", InstrumentType.KEYBOARD, 800.00, 1200.00, 88);
     }
     @Test
     public void hasMaterial(){
@@ -22,7 +23,7 @@ public class PianoTest {
     }
     @Test
     public void hasType(){
-        assertEquals("Keyboard", piano.getType());
+        assertEquals(InstrumentType.KEYBOARD, piano.getType());
     }
     @Test
     public void hasPriceBought(){
